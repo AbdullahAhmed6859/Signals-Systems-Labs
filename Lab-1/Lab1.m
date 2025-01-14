@@ -72,3 +72,50 @@ plot(t2, y2)
 title('Plotting y(t)');
 xlabel('y-axis');
 ylabel('t-axis');
+
+%% Task 4
+
+% Plotting 1st function
+subplot (3,1,1) %1st plot
+x=-3:1:3;
+m = x.^2;
+
+plot(x, m,'k','LineWidth',2.5)
+title('Plotting m(x)');
+xlabel('x');
+ylabel('Amplitude');
+
+% Plotting 2nd function
+subplot (3,1,2) %2nd plot
+x = -3:0.1:3;
+n = 2.5 * (x.^2);
+
+plot(x, n,'r')
+title('Plotting n(x)');
+xlabel('x');
+ylabel('Amplitude');
+
+% Plotting 3rd function
+subplot (3,1,3) %3rd plot
+x=-5:0.01:5;
+p = 2*(x.^2);
+
+plot(x, p,'g*')
+title('Plotting p(x)');
+xlabel('x');
+ylabel('Amplitude');
+
+% Adding main/super title
+sgtitle ('Non-linear graphs') %ignore this command if gives error
+
+%% Task 5
+% b)
+B = [eye(2), rand(2, 1)];
+B
+size(B)
+
+% b)
+v = zeros(1, 36); % Create a row vector with 36 zeros
+v(18) = 1;        % Set the 18th element to 1
+v
+
